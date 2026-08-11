@@ -3,112 +3,115 @@ import { House, Library } from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
 import { Typescript } from "@/components/ui/svgs/typescript";
-import { Nodejs } from "@/components/ui/svgs/nodejs";
 import { Python } from "@/components/ui/svgs/python";
-import { Golang } from "@/components/ui/svgs/golang";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
-import { Kubernetes } from "@/components/ui/svgs/kubernetes";
-import { Astro } from "@/components/ui/svgs/astro";
 
 export const DATA = {
-  name: "Alex Mercer - Software Engineer",
-  initials: "AM",
-  url: "https://alexmercer.dev",
-  location: "Austin, TX",
-  locationLink: "https://www.google.com/maps/place/austin+tx",
+  name: "Michael Azeez-Adekanmbi",
+  initials: "MA",
+  // NOTE: this is a Vercel domain, but Starfolio ships with the Cloudflare adapter
+  // in astro.config.mjs. If you're deploying to Vercel, swap @astrojs/cloudflare
+  // for @astrojs/vercel there - otherwise update this URL to wherever you deploy.
+  url: "https://michaelazeez-adekanmbi.vercel.app",
+  location: "Alimosho, Lagos, Nigeria",
+  locationLink: "https://www.google.com/maps/place/alimosho+lagos",
   description:
-    "Full-stack engineer turned indie founder. I love building developer tools, fast UIs, and products people actually use.",
+    "Software engineer with 3+ years of experience building commercial web platforms, internal business systems, and API-driven products using Python, JavaScript, Django, React, and TypeScript.",
   summary:
-    "In early 2023, I left a senior engineering role to go all-in on building my own SaaS products. Before that, [I completed a double degree in computer science and business](/#education), [interned at companies like Stripe and Cloudflare](/#work), and [competed in 18+ hackathons](/#hackathons). I also spent a summer in San Francisco as part of a founder residency focused on shipping fast and finding early customers.",
-  avatarUrl: "/picofme.png",
-  ogImage: "/og_image.png",
+    "I'm a software engineer with 3+ years of experience across backend architecture, frontend delivery, third-party integrations, QA, and deployment workflows, with a track record of shipping scalable features for retail, payments, operations, and business management systems. I'm comfortable owning a project end-to-end - from database schema and API design through to the React interfaces people actually use - with a focus on reliability, maintainability, and business impact. [Check out the projects below](/#projects) for the details, and [get in touch](/#contact) if you'd like to work together.",
+  avatarUrl: "/me.png", // TODO: add your headshot to /public/me.png
+  ogImage: "/og_image.png", // TODO: add an OG image to /public/og_image.png
   sections: {
     about: { order: 1, enabled: true, heading: "About" },
     work: { order: 2, enabled: true, heading: "Work Experience", presentLabel: "Present" },
     education: { order: 3, enabled: true, heading: "Education" },
     skills: { order: 4, enabled: true, heading: "Skills" },
     projects: {
-      order: 5, enabled: true,
+      order: 5,
+      enabled: true,
       label: "My Projects",
       heading: "Check out my latest work",
-      text: "I've worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.",
+      text: "I've worked on a variety of full-stack products and backend systems, from POS platforms to real-time customisation tools. Here are a few of my favorites.",
     },
     hackathons: {
-      order: 7, enabled: true,
+      order: 7,
+      enabled: false, // TODO: enable + fill in the `hackathons` array below if you have any to show
       label: "Hackathons",
       heading: "I like building things",
-      text: "During my time in university, I attended {count}+ hackathons. People from around the country would come together and build incredible things in 2-3 days. It was eye-opening to see the endless possibilities brought to life by a group of motivated and passionate individuals.",
+      text: "During my time in university, I attended {count}+ hackathons.",
     },
     photos: {
-      order: 6, enabled: true,
+      order: 6,
+      enabled: false, // TODO: enable once you have photos to add to /public/photos
       heading: "My Recent Travels",
     },
     contact: {
-      order: 8, enabled: true,
+      order: 8,
+      enabled: true,
       label: "Contact",
       heading: "Get in Touch",
-      text: "Want to chat? Just shoot me a dm with a direct question on twitter and I'll respond whenever I can. I will ignore all soliciting.",
+      text: "Open to fullstack and backend roles. Reach out on any of the channels below and I'll get back to you as soon as I can.",
     },
   },
-  photos: [
-    { src: "/photos/photo1.jpg", alt: "Photo 1" },
-    { src: "/photos/photo2.jpg", alt: "Photo 2" },
-    { src: "/photos/photo3.jpg", alt: "Photo 3" },
-    { src: "/photos/photo4.jpg", alt: "Photo 4" },
-    { src: "/photos/photo5.jpg", alt: "Photo 5" },
-    { src: "/photos/photo6.jpg", alt: "Photo 6" },
-    { src: "/photos/photo7.jpg", alt: "Photo 7" },
-    { src: "/photos/photo8.jpg", alt: "Photo 8" },
-    { src: "/photos/photo9.jpg", alt: "Photo 9" },
-  ],
+  photos: [],
+  // Icon-mapped where a Starfolio icon component exists; everything else renders
+  // as a plain text chip (just omit the `icon` field).
   skills: [
-    { name: "Astro", icon: Astro },
+    { name: "Python", icon: Python },
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
-    { name: "Typescript", icon: Typescript },
-    { name: "Node.js", icon: Nodejs },
-    { name: "Python", icon: Python },
-    { name: "Go", icon: Golang },
-    { name: "Postgres", icon: Postgresql },
+    { name: "TypeScript", icon: Typescript },
+    { name: "Tailwind CSS", icon: Icons.tailwindcss },
+    { name: "PostgreSQL", icon: Postgresql },
     { name: "Docker", icon: Docker },
-    { name: "Kubernetes", icon: Kubernetes },
+    { name: "Git", icon: Icons.github },
+    { name: "Framer Motion", icon: Icons.framermotion },
+    { name: "JavaScript" },
+    { name: "HTML" },
+    { name: "CSS" },
+    { name: "Django" },
+    { name: "FastAPI" },
+    { name: "Flask" },
+    { name: "MySQL" },
+    { name: "Postman" },
+    { name: "Swagger / OpenAPI" },
+    { name: "System Design" },
+    { name: "API Integration" },
+    { name: "QA Testing" },
+    { name: "Debugging" },
+    { name: "Documentation" },
+    { name: "Agile Collaboration" },
   ],
   navbar: [
     { href: "/", icon: House, label: "Home" },
-    { href: "/blog", icon: Library, label: "Blog" },
+    { href: "/blog", icon: Library, label: "Blog" }, // remove this line if you don't plan to use the blog
   ],
   contact: {
-    email: "alex@alexmercer.dev",
-    tel: "+1 512 000 0000",
+    email: "azeezadekanmbimichael@gmail.com",
+    tel: "+234 803 884 7666",
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://github.com",
+        url: "https://github.com/Mykel-Az",
         icon: Icons.github,
         navbar: true,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://linkedin.com",
+        url: "https://linkedin.com/in/michael-azeez-adekanmbi-968b70267",
         icon: Icons.linkedin,
         navbar: true,
       },
       X: {
         name: "X",
-        url: "https://x.com",
+        url: "https://x.com/Michael_Azed",
         icon: Icons.x,
-        navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "https://youtube.com",
-        icon: Icons.youtube,
         navbar: true,
       },
       email: {
         name: "Send Email",
-        url: "mailto:alex@alexmercer.dev",
+        url: "mailto:azeezadekanmbimichael@gmail.com",
         icon: Icons.email,
         navbar: false,
       },
@@ -117,344 +120,182 @@ export const DATA = {
 
   work: [
     {
-      company: "Meridian Labs",
-      href: "https://meridian.so",
-      badges: ["Founder"],
-      location: "Austin, TX",
-      title: "Co-founder & Engineer",
-      logoUrl: "https://avatar.vercel.sh/meridian-labs?size=40",
-      start: "January 2023",
-      end: undefined,
-      description:
-        "Building a suite of developer productivity tools focused on local-first architecture and offline sync. Grew to 1,200 paying customers within the first year. Responsible for the full stack - product, engineering, and growth.",
-    },
-    {
-      company: "Stripe",
-      href: "https://stripe.com",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Software Engineer Intern",
-      logoUrl: "https://www.google.com/s2/favicons?domain=stripe.com&sz=128",
-      start: "May 2022",
-      end: "August 2022",
-      description:
-        "Worked on the Payments Infrastructure team. Built an internal load-testing framework in Go that reduced regression testing time by 60%. Contributed to the migration of legacy billing logic to a new event-driven architecture using Kafka.",
-    },
-    {
-      company: "Cloudflare",
-      href: "https://cloudflare.com",
-      badges: [],
+      company: "RetailBox",
+      href: "https://retailbox.co",
+      badges: ["Contract"],
       location: "Remote",
-      title: "Software Engineer Intern",
-      logoUrl: "https://www.google.com/s2/favicons?domain=cloudflare.com&sz=128",
-      start: "September 2021",
-      end: "December 2021",
+      title: "Software Engineer",
+      logoUrl: "https://avatar.vercel.sh/retailbox?size=40", // TODO: swap for the real logo
+      start: "December 2024",
+      end: "April 2026",
       description:
-        "Joined the Workers team during a co-op term. Implemented a new dashboard UI for monitoring Worker invocation metrics using React and D3. Added support for custom error boundaries in the Workers runtime sandbox.",
+        "Co-developed a modular retail POS and storefront platform using React, TypeScript, Next.js, and Django for multi-store business operations. Built and integrated features across inventory workflows, sales operations, storefront management, and API-connected business modules, including barcode-scanning and product lookup workflows tied to backend APIs. Contributed to payment and business process integrations supporting commercial rollout readiness, led QA efforts across frontend and backend flows to reduce release issues, and improved developer workflow through API documentation using Swagger and Postman.",
     },
     {
-      company: "Datadog",
-      href: "https://datadoghq.com",
-      badges: [],
-      location: "New York, NY",
-      title: "Software Engineer Intern",
-      logoUrl: "https://www.google.com/s2/favicons?domain=datadoghq.com&sz=128",
-      start: "January 2021",
-      end: "April 2021",
+      company: "Blue Diamond Solutions",
+      href: "https://bluediamondsolutions.org",
+      badges: ["Contract"],
+      location: "Remote",
+      title: "Software Engineer",
+      logoUrl: "https://avatar.vercel.sh/bluediamondsolutions?size=40", // TODO: swap for the real logo
+      start: "March 2025",
+      end: "April 2025",
       description:
-        "Built new alert correlation features in the Incidents product using Python and React. Improved p99 query latency on the metrics explorer by 40% through query plan optimizations in PostgreSQL.",
+        "Independently designed, built, and deployed a business IT solutions web application using Django and Tailwind CSS, with media management via Cloudinary and hosting on Render. Built a secure staff dashboard for managing contact messages and updating the project portfolio, and integrated Google Calendar for consultation scheduling. Led the full development lifecycle - from design and backend logic through to deployment and performance optimisation.",
     },
     {
-      company: "Benchling",
-      href: "https://benchling.com",
-      badges: [],
-      location: "San Francisco, CA",
+      company: "Computer Warehouse Group (CWG)",
+      href: "https://cwgplc.com", // TODO: confirm this is the right URL
+      badges: ["Internship"],
+      location: "Lagos, Nigeria",
       title: "Software Engineer Intern",
-      logoUrl: "https://www.google.com/s2/favicons?domain=benchling.com&sz=128",
-      start: "May 2020",
-      end: "August 2020",
+      logoUrl: "https://avatar.vercel.sh/cwg?size=40", // TODO: swap for the real logo
+      start: "April 2023",
+      end: "June 2023",
       description:
-        "Worked on the scientific data platform team. Implemented a bulk import pipeline for lab instrument data using TypeScript and AWS Lambda, reducing manual data entry time for research teams by over 80%.",
-    },
-    {
-      company: "Relay Labs",
-      href: "https://relay.app",
-      badges: [],
-      location: "Vancouver, BC",
-      title: "Software Engineer Intern",
-      logoUrl: "https://www.google.com/s2/favicons?domain=relay.app&sz=128",
-      start: "September 2019",
-      end: "December 2019",
-      description:
-        "Early-stage startup building workflow automation tools. Shipped core integrations with Slack, Notion, and GitHub. Designed the initial webhook delivery system in Node.js that handled over 500k events per day at peak.",
+        "Enhanced core product functionality, resolved reported issues, and participated in team code reviews and technical documentation. Took part in debugging sessions and technical documentation processes within an engineering team.",
     },
   ],
+
   education: [
     {
-      school: "Founder Fellowship SF",
-      href: "https://foundersfellowship.io",
-      degree: "Cohort 4 - Founder in Residence",
-      logoUrl: "https://avatar.vercel.sh/founder-fellowship?size=40",
-      start: "2023",
-      end: "2023",
+      school: "Quantic School of Business and Technology",
+      href: "https://quantic.edu",
+      degree: "M.Sc. Software Engineering",
+      logoUrl: "https://www.google.com/s2/favicons?domain=quantic.edu&sz=128",
+      start: "November 2025",
+      end: undefined,
     },
     {
-      school: "University of British Columbia",
-      href: "https://ubc.ca",
-      degree: "Bachelor of Science, Computer Science",
-      logoUrl: "https://www.google.com/s2/favicons?domain=ubc.ca&sz=128",
-      start: "2018",
-      end: "2023",
+      school: "Anchor University, Ayobo, Lagos State",
+      href: "https://aul.edu.ng",
+      degree: "B.Sc. Microbiology",
+      logoUrl: "https://www.google.com/s2/favicons?domain=aul.edu.ng&sz=128",
+      start: "September 2019",
+      end: "July 2022",
     },
     {
-      school: "Simon Fraser University",
-      href: "https://sfu.ca",
-      degree: "Bachelor of Business Administration",
-      logoUrl: "https://www.google.com/s2/favicons?domain=sfu.ca&sz=128",
-      start: "2018",
-      end: "2023",
+      school: "AltSchool Africa",
+      href: "https://altschoolafrica.com", // TODO: confirm this is the right URL
+      degree: "Certification - Backend Engineering",
+      logoUrl: "https://www.google.com/s2/favicons?domain=altschoolafrica.com&sz=128",
+      start: "2024",
+      end: "2024",
     },
     {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "https://www.google.com/s2/favicons?domain=ibo.org&sz=128",
-      start: "2014",
-      end: "2018",
+      school: "Utiva",
+      href: "https://utiva.io", // TODO: confirm this is the right URL
+      degree: "Certification - Data Science and Analytics",
+      logoUrl: "https://www.google.com/s2/favicons?domain=utiva.io&sz=128",
+      start: "2020",
+      end: "2020",
     },
   ],
+
   projects: [
     {
-      title: "Stackwise",
-      href: "https://stackwise.dev",
-      dates: "March 2024 - Present",
+      title: "RetailBox — POS App",
+      href: "https://app.retailbox.co",
+      dates: "December 2024 - Present",
       active: true,
       description:
-        "Built an AI-powered code review tool that integrates with GitHub PRs and provides context-aware feedback based on your team's codebase conventions. Used by 300+ engineering teams.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "OpenAI API",
-      ],
+        "All-in-one point-of-sale and business management platform for retail businesses, consolidating inventory, sales, staff, and customer management into a single fast, reliable product. Built the React + TypeScript frontend and the Python backend, including the multi-tenant PostgreSQL schema and Docker-based deployment setup.",
+      technologies: ["React", "Python", "TypeScript", "Docker", "PostgreSQL"],
       links: [
         {
+          type: "Live app",
+          href: "https://app.retailbox.co",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
           type: "Website",
-          href: "https://stackwise.dev",
+          href: "https://retailbox.co",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "/example-website.webp",
+      image: "/images/retailbox_app.png", // TODO: add screenshot to /public/images
       video: "",
     },
     {
-      title: "Logport",
-      href: "https://logport.io",
-      dates: "October 2023 - February 2024",
+      title: "RetailBox — Engine API",
+      href: "https://postman.retailbox.co/",
+      dates: "December 2024 - Present",
       active: true,
       description:
-        "Open-source structured logging dashboard for Node.js and Python services. Ingest logs via a lightweight SDK, query them with a SQL-like syntax, and set up alerts in minutes.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "ClickHouse",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Cloudflare Workers",
-      ],
+        "The Django REST Framework backend powering the entire RetailBox ecosystem — POS app, storefront, and marketing site. Designed the data models, authentication and permissions layer, and auto-generated Swagger docs via drf-spectacular, and maintained the public Postman collection for developer integration.",
+      technologies: ["Django", "PostgreSQL", "Postman", "Swagger / OpenAPI"],
       links: [
         {
-          type: "Website",
-          href: "https://logport.io",
+          type: "Postman docs",
+          href: "https://postman.retailbox.co/",
           icon: <Icons.globe className="size-3" />,
         },
-        {
-          type: "Source",
-          href: "https://github.com/alexmercer-dev/logport",
-          icon: <Icons.github className="size-3" />,
-        },
       ],
-      image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
-    },
-    {
-      title: "Formbase",
-      href: "https://formbase.dev",
-      dates: "June 2023 - September 2023",
-      active: true,
-      description:
-        "A headless form backend that handles submissions, spam filtering, file uploads, and email notifications - no server required. Drop in one script tag and you're done.",
-      technologies: [
-        "Astro",
-        "TypeScript",
-        "Cloudflare Workers",
-        "TailwindCSS",
-        "Stripe",
-        "Resend",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://formbase.dev",
-          icon: <Icons.globe className="size-3" />,
-        },
-        {
-          type: "Source",
-          href: "https://github.com/alexmercer-dev/formbase",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "/example-website.png",
+      image: "/images/retailbox_engine.png", // TODO: add screenshot to /public/images
       video: "",
     },
     {
-      title: "Patchwork",
-      href: "https://patchwork.run",
-      dates: "February 2023 - May 2023",
+      title: "Cafe Fausse",
+      href: "https://cafefausseplace.vercel.app",
+      dates: "2023", // TODO: replace with the actual timeframe
       active: false,
       description:
-        "A visual diff tool for design tokens and Tailwind config changes. Connect it to your repo and get a live preview of how a config change affects every component in your design system.",
-      technologies: [
-        "Next.js",
-        "TypeScript",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Vercel",
-      ],
+        "A full-stack restaurant reservation platform with real-time table availability, customer validation, and a password-protected staff portal for managing bookings. Built end-to-end: the React frontend, Flask API, and PostgreSQL schema.",
+      technologies: ["React", "Flask", "PostgreSQL"],
       links: [
         {
-          type: "Website",
-          href: "https://patchwork.run",
+          type: "Live site",
+          href: "https://cafefausseplace.vercel.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Staff portal",
+          href: "https://cafefausseplace.vercel.app/admin",
           icon: <Icons.globe className="size-3" />,
         },
       ],
-      image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      image: "/images/cafe_fausse.png", // TODO: add screenshot to /public/images
+      video: "",
+    },
+    {
+      title: "BlueDiamond Solutions",
+      href: "https://bluediamondsolutions.org/",
+      dates: "March 2025 - April 2025",
+      active: false,
+      description:
+        "A professional corporate website with service pages, project showcases, and consultation booking, with CMS-style content management through Django's built-in admin. Handled architecture, Tailwind-styled templates, Cloudinary media integration, and booking/contact forms as sole developer.",
+      technologies: ["Django", "Python", "Tailwind CSS", "Cloudinary"],
+      links: [
+        {
+          type: "Live site",
+          href: "https://bluediamondsolutions.org/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/images/bds.png", // TODO: add screenshot to /public/images
+      video: "",
+    },
+    {
+      title: "Merch Visualizer",
+      href: "https://bluediamondsolutions.org/services/graphics-design/visualizer/",
+      dates: "2023", // TODO: replace with the actual timeframe
+      active: false,
+      description:
+        "A real-time 2D product customisation tool that lets clients preview branded merchandise - colours, text, and logo placement - directly in the browser, cutting back-and-forth on design requests. Built as a standalone React + TypeScript app rendering entirely on an HTML Canvas, embedded in the BlueDiamond site.",
+      technologies: ["React", "TypeScript", "Tailwind CSS"],
+      links: [
+        {
+          type: "Live demo",
+          href: "https://bluediamondsolutions.org/services/graphics-design/visualizer/",
+          icon: <Icons.globe className="size-3" />,
+        },
+      ],
+      image: "/images/merch-visualizer.png", // TODO: add screenshot to /public/images
+      video: "",
     },
   ],
-  hackathons: [
-    {
-      title: "PNW Hacks 2022",
-      dates: "October 14th - 16th, 2022",
-      location: "Seattle, Washington",
-      description: "Built a real-time collaborative code review tool using WebSockets and Monaco Editor. Won best developer tool.",
-      image: "https://avatar.vercel.sh/pnw-hacks?size=40",
-      win: "Best Developer Tool",
-      links: [],
-    },
-    {
-      title: "nwHacks 2022",
-      dates: "January 15th - 16th, 2022",
-      location: "Vancouver, BC",
-      description: "Created an accessibility-first browser extension that rewrites complex legal documents into plain English using GPT-3.",
-      image: "https://avatar.vercel.sh/nwhacks-2022?size=40",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [],
-    },
-    {
-      title: "HackTheNorth 2021",
-      dates: "September 17th - 19th, 2021",
-      location: "Waterloo, Ontario (Remote)",
-      description: "Built a distributed key-value store in Go with a Raft consensus implementation from scratch. Finalist in the systems track.",
-      image: "https://avatar.vercel.sh/hackthenorth-2021?size=40",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/alexmercer-dev/raftdb",
-        },
-      ],
-    },
-    {
-      title: "DubHacks 2021",
-      dates: "October 9th - 10th, 2021",
-      location: "Seattle, Washington",
-      description: "Developed a carbon footprint tracker that integrates with Google Maps to suggest lower-emission commute alternatives.",
-      image: "https://avatar.vercel.sh/dubhacks-2021?size=40",
-      win: "Best Sustainability Hack",
-      links: [],
-    },
-    {
-      title: "StormHacks 2021",
-      dates: "April 24th - 25th, 2021",
-      location: "Burnaby, BC (Remote)",
-      description: "Built a multiplayer browser game where players collaboratively debug a shared codebase before a timer runs out.",
-      image: "https://avatar.vercel.sh/stormhacks-2021?size=40",
-      links: [
-        {
-          title: "Devpost",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://devpost.com/software/bugout",
-        },
-      ],
-    },
-    {
-      title: "HackCamp 2020",
-      dates: "November 14th - 15th, 2020",
-      location: "Vancouver, BC (Remote)",
-      description: "Created a CLI tool that automatically generates unit test scaffolding from TypeScript function signatures using static analysis.",
-      image: "https://avatar.vercel.sh/hackcamp-2020?size=40",
-      win: "1st Place Overall",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/alexmercer-dev/testgen",
-        },
-      ],
-    },
-    {
-      title: "cmd-f 2020",
-      dates: "March 7th - 8th, 2020",
-      location: "Vancouver, BC",
-      description: "Built a mobile-first job board specifically for junior developers, aggregating listings from GitHub Jobs, HN Who's Hiring, and LinkedIn.",
-      image: "https://avatar.vercel.sh/cmd-f-2020?size=40",
-      links: [],
-    },
-    {
-      title: "nwHacks 2020",
-      dates: "January 11th - 12th, 2020",
-      location: "Vancouver, BC",
-      description: "Developed a peer-to-peer study session platform with live video, shared whiteboards, and Pomodoro timers.",
-      image: "https://avatar.vercel.sh/nwhacks-2020?size=40",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [],
-    },
-    {
-      title: "HackTheNorth 2019",
-      dates: "September 13th - 15th, 2019",
-      location: "Waterloo, Ontario",
-      description: "Built an API rate-limit visualizer that tracks usage across multiple providers and surfaces anomalies in real time.",
-      image: "https://avatar.vercel.sh/hackthenorth-2019?size=40",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/alexmercer-dev/ratelens",
-        },
-      ],
-    },
-    {
-      title: "DeltaHacks V",
-      dates: "January 18th - 19th, 2019",
-      location: "Hamilton, Ontario",
-      description: "Created a VS Code extension that suggests variable names based on type signatures and surrounding code context using a local ML model.",
-      image: "https://avatar.vercel.sh/deltahacks-v?size=40",
-      links: [],
-    },
-    {
-      title: "StormHacks 2019",
-      dates: "March 2nd - 3rd, 2019",
-      location: "Burnaby, BC",
-      description: "Built a network latency heatmap tool that visualises CDN performance across regions using real user data injected via a lightweight JS snippet.",
-      image: "https://avatar.vercel.sh/stormhacks-2019?size=40",
-      win: "Best Infrastructure Hack",
-      links: [],
-    },
-  ],
+
+  // TODO: fill in if/when you have hackathons to show, or leave empty and keep
+  // sections.hackathons.enabled = false above
+  hackathons: [],
 } as const;

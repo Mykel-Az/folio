@@ -3,9 +3,10 @@ export const CONFIG = {
   // Site Settings
   // ---------------------------------------------------------------------------
   site: {
-    url: "https://alexmercer.dev",
+    // NOTE: must match DATA.url in resume.tsx AND `site` in astro.config.mjs
+    url: "https://michaelazeez-adekanmbi.vercel.app",
     locale: "en_US",
-    twitterHandle: "@alexmercer_dev",
+    twitterHandle: "@Michael_Azed",
   },
 
   // ---------------------------------------------------------------------------
@@ -22,8 +23,7 @@ export const CONFIG = {
   // ---------------------------------------------------------------------------
   typography: {
     // Base font size as a percentage. 100 = browser default (16px).
-    // 110 = 10% larger or 90 = 10% smaller, across all text, headings, and links simultaneously.
-    baseFontSize: 115,
+    baseFontSize: 100,
   },
 
   // ---------------------------------------------------------------------------
@@ -34,20 +34,12 @@ export const CONFIG = {
   },
 
   // ---------------------------------------------------------------------------
-  // Font Settings
-  // See https://fontsource.org/?variable=true for fonts that can be installed via package registry
-  // To change fonts:
-  // 1. pnpm install @fontsource-variable/<font-name> (for example 'pnpm add @fontsource-variable/inter'). Install BOTH the sans and mono fonts.
-  // 2. Edit src/styles/global.css - swap the @import and --font-sans and --font-mono values
-  // ---------------------------------------------------------------------------
-
-  // ---------------------------------------------------------------------------
   // Design Settings
-  // 1. Pick a theme at ui.shadcn.com/themes or generate one with a tool like tweakcn.com
-  // 2. Copy the CSS variables block
-  // 3. Paste into BELOW with the naming conversion already used
+  // Kept at Starfolio's default neutral shadcn theme. If you want a different
+  // look, grab a theme from ui.shadcn.com/themes or tweakcn.com, copy its CSS
+  // variables, and paste them in here (strip the `--` prefix, camelCase the
+  // names, e.g. `card-foreground` becomes `cardForeground`).
   // ---------------------------------------------------------------------------
-
   theme: {
     radius: "0.625rem",
 
@@ -93,5 +85,4 @@ export const CONFIG = {
       ring: "oklch(0.556 0 0)",
     },
   },
-
 } as const;
