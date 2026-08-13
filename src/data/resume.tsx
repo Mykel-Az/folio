@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { House, Library } from "lucide-react";
+import { House, Icon, Library } from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
 import { Typescript } from "@/components/ui/svgs/typescript";
@@ -14,13 +14,15 @@ export const DATA = {
   // in astro.config.mjs. If you're deploying to Vercel, swap @astrojs/cloudflare
   // for @astrojs/vercel there - otherwise update this URL to wherever you deploy.
   url: "https://michaelazeez-adekanmbi.vercel.app",
-  location: "Alimosho, Lagos, Nigeria",
-  locationLink: "https://www.google.com/maps/place/alimosho+lagos",
+  // location: "Alimosho, Lagos, Nigeria",
+  // locationLink: "https://www.google.com/maps/place/alimosho+lagos",
   description:
-    "Software engineer with 3+ years of experience building commercial web platforms, internal business systems, and API-driven products using Python, JavaScript, Django, React, and TypeScript.",
+    "Software engineer building commercial web platforms, internal business systems, and API-driven products using Python, JavaScript, Django, React, and TypeScript.",
   summary:
-    "I'm a software engineer with 3+ years of experience across backend architecture, frontend delivery, third-party integrations, QA, and deployment workflows, with a track record of shipping scalable features for retail, payments, operations, and business management systems. I'm comfortable owning a project end-to-end - from database schema and API design through to the React interfaces people actually use - with a focus on reliability, maintainability, and business impact. [Check out the projects below](/#projects) for the details, and [get in touch](/#contact) if you'd like to work together.",
-  avatarUrl: "/me.png", // TODO: add your headshot to /public/me.png
+    "I'm a software engineer working across backend architecture, frontend delivery, third-party integrations, QA, and deployment workflows, with a track record of shipping scalable features for retail, payments, operations, and business management systems. I'm comfortable owning a project end-to-end - from database schema and API design through to the React interfaces people actually use - with a focus on reliability, maintainability, and business impact, and I'm currently pursuing an M.Sc. in Software Engineering to sharpen that further. " +
+    // "Most recently, I architected and shipped [PROJECT NAME] solo, from schema to deployment. " +
+    "[Check out the projects below](/#projects) for the details, and [get in touch](/#contact) if you'd like to work together.",
+  avatarUrl: "/Azz(1).jpeg", // TODO: add your headshot to /public/me.png
   ogImage: "/og_image.png", // TODO: add an OG image to /public/og_image.png
   sections: {
     about: { order: 1, enabled: true, heading: "About" },
@@ -59,6 +61,7 @@ export const DATA = {
   // as a plain text chip (just omit the `icon` field).
   skills: [
     { name: "Python", icon: Python },
+    { name: "Django" }, // Pick your 1 main Python backend framework
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
     { name: "TypeScript", icon: Typescript },
@@ -66,23 +69,8 @@ export const DATA = {
     { name: "PostgreSQL", icon: Postgresql },
     { name: "Docker", icon: Docker },
     { name: "Git", icon: Icons.github },
-    { name: "Framer Motion", icon: Icons.framermotion },
-    { name: "JavaScript" },
-    { name: "HTML" },
-    { name: "CSS" },
-    { name: "Django" },
-    { name: "FastAPI" },
-    { name: "Flask" },
-    { name: "MySQL" },
-    { name: "Postman" },
-    { name: "Swagger / OpenAPI" },
-    { name: "System Design" },
-    { name: "API Integration" },
-    { name: "QA Testing" },
-    { name: "Debugging" },
-    { name: "Documentation" },
-    { name: "Agile Collaboration" },
   ],
+
   navbar: [
     { href: "/", icon: House, label: "Home" },
     { href: "/blog", icon: Library, label: "Blog" }, // remove this line if you don't plan to use the blog
@@ -107,13 +95,13 @@ export const DATA = {
         name: "X",
         url: "https://x.com/Michael_Azed",
         icon: Icons.x,
-        navbar: true,
+        navbar: false,
       },
       email: {
         name: "Send Email",
         url: "mailto:azeezadekanmbimichael@gmail.com",
         icon: Icons.email,
-        navbar: false,
+        navbar: true,
       },
     },
   },
@@ -125,7 +113,7 @@ export const DATA = {
       badges: ["Contract"],
       location: "Remote",
       title: "Software Engineer",
-      logoUrl: "https://avatar.vercel.sh/retailbox?size=40", // TODO: swap for the real logo
+      logoUrl: "https://www.google.com/s2/favicons?domain=retailbox.co&sz=128", // TODO: swap for the real logo
       start: "December 2024",
       end: "April 2026",
       description:
@@ -137,7 +125,7 @@ export const DATA = {
       badges: ["Contract"],
       location: "Remote",
       title: "Software Engineer",
-      logoUrl: "https://avatar.vercel.sh/bluediamondsolutions?size=40", // TODO: swap for the real logo
+      logoUrl: "https://www.google.com/s2/favicons?domain=bluediamondsolutions.org&sz=128", // TODO: swap for the real logo
       start: "March 2025",
       end: "April 2025",
       description:
@@ -149,7 +137,7 @@ export const DATA = {
       badges: ["Internship"],
       location: "Lagos, Nigeria",
       title: "Software Engineer Intern",
-      logoUrl: "https://avatar.vercel.sh/cwg?size=40", // TODO: swap for the real logo
+      logoUrl: "https://www.google.com/s2/favicons?domain=cwg-plc.com&sz=128", // TODO: swap for the real logo
       start: "April 2023",
       end: "June 2023",
       description:
@@ -167,20 +155,20 @@ export const DATA = {
       end: undefined,
     },
     {
+      school: "AltSchool Africa",
+      href: "https://altschoolafrica.com", // TODO: confirm this is the right URL
+      degree: "Certification - Backend Engineering",
+      logoUrl: "https://www.google.com/s2/favicons?domain=altschoolafrica.com&sz=128",
+      start: "2023",
+      end: "2024",
+    },
+    {
       school: "Anchor University, Ayobo, Lagos State",
       href: "https://aul.edu.ng",
       degree: "B.Sc. Microbiology",
       logoUrl: "https://www.google.com/s2/favicons?domain=aul.edu.ng&sz=128",
       start: "September 2019",
       end: "July 2022",
-    },
-    {
-      school: "AltSchool Africa",
-      href: "https://altschoolafrica.com", // TODO: confirm this is the right URL
-      degree: "Certification - Backend Engineering",
-      logoUrl: "https://www.google.com/s2/favicons?domain=altschoolafrica.com&sz=128",
-      start: "2024",
-      end: "2024",
     },
     {
       school: "Utiva",
@@ -237,7 +225,7 @@ export const DATA = {
     {
       title: "Cafe Fausse",
       href: "https://cafefausseplace.vercel.app",
-      dates: "2023", // TODO: replace with the actual timeframe
+      dates: "2026", // TODO: replace with the actual timeframe
       active: false,
       description:
         "A full-stack restaurant reservation platform with real-time table availability, customer validation, and a password-protected staff portal for managing bookings. Built end-to-end: the React frontend, Flask API, and PostgreSQL schema.",
@@ -253,6 +241,11 @@ export const DATA = {
           href: "https://cafefausseplace.vercel.app/admin",
           icon: <Icons.globe className="size-3" />,
         },
+        // {
+        //   type: "github",
+        //   href: "https://cafefausseplace.vercel.app/admin",
+        //   icon: <Icons.github className="size-3" />,
+        // },
       ],
       image: "/images/cafe_fausse.png", // TODO: add screenshot to /public/images
       video: "",
@@ -275,24 +268,24 @@ export const DATA = {
       image: "/images/bds.png", // TODO: add screenshot to /public/images
       video: "",
     },
-    {
-      title: "Merch Visualizer",
-      href: "https://bluediamondsolutions.org/services/graphics-design/visualizer/",
-      dates: "2023", // TODO: replace with the actual timeframe
-      active: false,
-      description:
-        "A real-time 2D product customisation tool that lets clients preview branded merchandise - colours, text, and logo placement - directly in the browser, cutting back-and-forth on design requests. Built as a standalone React + TypeScript app rendering entirely on an HTML Canvas, embedded in the BlueDiamond site.",
-      technologies: ["React", "TypeScript", "Tailwind CSS"],
-      links: [
-        {
-          type: "Live demo",
-          href: "https://bluediamondsolutions.org/services/graphics-design/visualizer/",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "/images/merch-visualizer.png", // TODO: add screenshot to /public/images
-      video: "",
-    },
+    // {
+    //   title: "Merch Visualizer",
+    //   href: "https://bluediamondsolutions.org/services/graphics-design/visualizer/",
+    //   dates: "2023", // TODO: replace with the actual timeframe
+    //   active: false,
+    //   description:
+    //     "A real-time 2D product customisation tool that lets clients preview branded merchandise - colours, text, and logo placement - directly in the browser, cutting back-and-forth on design requests. Built as a standalone React + TypeScript app rendering entirely on an HTML Canvas, embedded in the BlueDiamond site.",
+    //   technologies: ["React", "TypeScript", "Tailwind CSS"],
+    //   links: [
+    //     {
+    //       type: "Live demo",
+    //       href: "https://bluediamondsolutions.org/services/graphics-design/visualizer/",
+    //       icon: <Icons.globe className="size-3" />,
+    //     },
+    //   ],
+    //   image: "/images/merch-visualizer.png", // TODO: add screenshot to /public/images
+    //   video: "",
+    // },
   ],
 
   // TODO: fill in if/when you have hackathons to show, or leave empty and keep

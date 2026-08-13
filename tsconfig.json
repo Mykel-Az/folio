@@ -3,7 +3,6 @@
   "include": [
     ".astro/types.d.ts",
     "**/*",
-    "./worker-configuration.d.ts"
   ],
   "exclude": [
     "dist",
@@ -13,9 +12,7 @@
     "ignoreDeprecations": "6.0",
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "react",
