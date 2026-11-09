@@ -17,10 +17,9 @@ export const DATA = {
   // location: "Alimosho, Lagos, Nigeria",
   // locationLink: "https://www.google.com/maps/place/alimosho+lagos",
   description:
-    "Software engineer building commercial web platforms, internal business systems, and API-driven products using Python, JavaScript, Django, React, and TypeScript.",
+    "Full-stack software engineer building production web applications and AI-agent tooling with Python (Django, FastAPI) and TypeScript/React.",
   summary:
-    "I'm a software engineer working across backend architecture, frontend delivery, third-party integrations, QA, and deployment workflows, with a track record of shipping scalable features for retail, payments, operations, and business management systems. I'm comfortable owning a project end-to-end - from database schema and API design through to the React interfaces people actually use - with a focus on reliability, maintainability, and business impact, and I'm currently pursuing an M.Sc. in Software Engineering to sharpen that further. " +
-    // "Most recently, I architected and shipped [PROJECT NAME] solo, from schema to deployment. " +
+    "I'm a full-stack software engineer who builds and ships production web applications and AI-agent tooling. My experience spans payments, third-party API integrations, MCP servers, and data-driven prediction services, backed by solid QA and API documentation practice. Most recently I built MCP tools for an AI marketplace, and before that I shipped payments and domain brokerage for a retail platform. I'm currently pursuing an M.Sc. in Software Engineering. " +
     "[Check out the projects below](/#projects) for the details, and [get in touch](/#contact) if you'd like to work together.",
   avatarUrl: "/Azz(1).jpeg", // TODO: add your headshot to /public/me.png
   ogImage: "/og_image.png", // TODO: add an OG image to /public/og_image.png
@@ -34,7 +33,7 @@ export const DATA = {
       enabled: true,
       label: "My Projects",
       heading: "Check out my latest work",
-      text: "I've worked on a variety of full-stack products and backend systems, from POS platforms to real-time customisation tools. Here are a few of my favorites.",
+      text: "I've worked on payments, third-party integrations, MCP servers for AI agents, and full-stack web apps. Here are a few of my favorites.",
     },
     hackathons: {
       order: 7,
@@ -61,14 +60,27 @@ export const DATA = {
   // as a plain text chip (just omit the `icon` field).
   skills: [
     { name: "Python", icon: Python },
-    { name: "Django" }, // Pick your 1 main Python backend framework
+    { name: "Django" },
+    { name: "FastAPI" },
+    { name: "Flask" },
+    { name: "MCP Servers" },
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
     { name: "TypeScript", icon: Typescript },
+    { name: "JavaScript" },
     { name: "Tailwind CSS", icon: Icons.tailwindcss },
     { name: "PostgreSQL", icon: Postgresql },
+    { name: "MySQL" },
     { name: "Docker", icon: Docker },
     { name: "Git", icon: Icons.github },
+    { name: "Paystack" },
+    { name: "Namecheap" },
+    { name: "Google Calendar" },
+    { name: "Cloudinary" },
+    { name: "Render" },
+    { name: "API Design" },
+    { name: "QA Testing" },
+    { name: "Technical Documentation" },
   ],
 
   navbar: [
@@ -108,6 +120,18 @@ export const DATA = {
 
   work: [
     {
+      company: "Context Protocol (AI Marketplace)",
+      href: "https://contextprotocol.org", // TODO: confirm the correct URL
+      badges: ["Contract"],
+      location: "Remote",
+      title: "Software Engineer",
+      logoUrl: "https://avatar.vercel.sh/contextprotocol?size=40", // TODO: swap for the real logo
+      start: "March 2026",
+      end: "May 2026",
+      description:
+        "Built a revenue intelligence MCP tool for SaaS companies that turns public signals (headcount growth, G2 reviews) into revenue-trajectory forecasts, with automated model retraining and a live prediction API. Also built an MCP server for commercial real estate investor discovery: searching by corridor and lot size returns owner contacts, entity profiles, and nationwide portfolios, a pay-per-query alternative to Reonomy's corridor-filter workflow.",
+    },
+    {
       company: "RetailBox",
       href: "https://retailbox.co",
       badges: ["Contract"],
@@ -115,9 +139,9 @@ export const DATA = {
       title: "Software Engineer",
       logoUrl: "https://www.google.com/s2/favicons?domain=retailbox.co&sz=128", // TODO: swap for the real logo
       start: "December 2024",
-      end: "April 2026",
+      end: "December 2025",
       description:
-        "Co-developed a modular retail POS and storefront platform using React, TypeScript, Next.js, and Django for multi-store business operations. Built and integrated features across inventory workflows, sales operations, storefront management, and API-connected business modules, including barcode-scanning and product lookup workflows tied to backend APIs. Contributed to payment and business process integrations supporting commercial rollout readiness, led QA efforts across frontend and backend flows to reduce release issues, and improved developer workflow through API documentation using Swagger and Postman.",
+        "Co-developed the POS App's Storefront in React, TypeScript, and Next.js, which creates an online store automatically from a merchant's inventory. Built the domain brokerage service with FastAPI and Namecheap, letting merchants find, buy, or transfer a domain, and integrated it into the storefront feature. Built the Paystack payment system that manages user subscriptions and integrated it into the main Django backend. Did QA and endpoint testing on the Engine API with Postman suites and wrote its API documentation (Swagger, Postman).",
     },
     {
       company: "Blue Diamond Solutions",
@@ -129,7 +153,7 @@ export const DATA = {
       start: "March 2025",
       end: "April 2025",
       description:
-        "Independently designed, built, and deployed a business IT solutions web application using Django and Tailwind CSS, with media management via Cloudinary and hosting on Render. Built a secure staff dashboard for managing contact messages and updating the project portfolio, and integrated Google Calendar for consultation scheduling. Led the full development lifecycle - from design and backend logic through to deployment and performance optimisation.",
+        "Designed and deployed a responsive business website using Django, Tailwind CSS, and Cloudinary. Built a secure staff dashboard, consultation forms, and Google Calendar integration, and managed the full development lifecycle from design to deployment on Render.",
     },
     {
       company: "Computer Warehouse Group (CWG)",
@@ -141,7 +165,7 @@ export const DATA = {
       start: "April 2023",
       end: "June 2023",
       description:
-        "Enhanced core product functionality, resolved reported issues, and participated in team code reviews and technical documentation. Took part in debugging sessions and technical documentation processes within an engineering team.",
+        "Enhanced product functionality, participated in code reviews, and improved documentation.",
     },
   ],
 
@@ -159,7 +183,7 @@ export const DATA = {
       href: "https://altschoolafrica.com", // TODO: confirm this is the right URL
       degree: "Certification - Backend Engineering",
       logoUrl: "https://www.google.com/s2/favicons?domain=altschoolafrica.com&sz=128",
-      start: "2023",
+      start: "2024",
       end: "2024",
     },
     {
@@ -181,14 +205,38 @@ export const DATA = {
   ],
 
   projects: [
+    // {
+    //   title: "SaaS Revenue Intelligence MCP Tool",
+    //   href: "", // TODO: add the repo or marketplace link
+    //   dates: "March 2026 - May 2026",
+    //   active: false,
+    //   description:
+    //     "An MCP tool for the Context Protocol marketplace that turns public signals for SaaS companies (headcount growth, G2 reviews) into revenue-trajectory forecasts. Includes automated model retraining and a live prediction API.",
+    //   technologies: ["Python", "MCP", "ML Pipeline"], // TODO: confirm the stack
+    //   links: [],
+    //   image: "", // TODO: add screenshot to /public/images
+    //   video: "",
+    // },
+    // {
+    //   title: "CRE Investor Discovery MCP Server",
+    //   href: "", // TODO: add the repo or marketplace link
+    //   dates: "March 2026 - May 2026",
+    //   active: false,
+    //   description:
+    //     "An MCP server for commercial real estate investor discovery. Searching by corridor and lot size returns owner contacts, entity profiles, and nationwide portfolios, as a pay-per-query alternative to Reonomy's corridor-filter workflow.",
+    //   technologies: ["MCP", "Python"], // TODO: confirm the stack
+    //   links: [],
+    //   image: "", // TODO: add screenshot to /public/images
+    //   video: "",
+    // },
     {
       title: "RetailBox — POS App",
       href: "https://app.retailbox.co",
-      dates: "December 2024 - Present",
-      active: true,
+      dates: "December 2024 - December 2025",
+      active: false,
       description:
-        "All-in-one point-of-sale and business management platform for retail businesses, consolidating inventory, sales, staff, and customer management into a single fast, reliable product. Built the React + TypeScript frontend and the Python backend, including the multi-tenant PostgreSQL schema and Docker-based deployment setup.",
-      technologies: ["React", "Python", "TypeScript", "Docker", "PostgreSQL"],
+        "A point-of-sale platform whose storefront feature automatically creates an online store from a merchant's POS inventory. Co-developed the Storefront in React, TypeScript, and Next.js. Built the domain brokerage separately with FastAPI and Namecheap (find, buy, or transfer a domain) and integrated it into the storefront so a domain can be acquired and activated for each store. Built the Paystack payment system that manages user subscriptions in the POS app.",
+      technologies: ["React", "TypeScript", "Next.js", "FastAPI", "Paystack", "Namecheap API"],
       links: [
         {
           type: "Live app",
@@ -207,11 +255,11 @@ export const DATA = {
     {
       title: "RetailBox — Engine API",
       href: "https://postman.retailbox.co/",
-      dates: "December 2024 - Present",
-      active: true,
+      dates: "December 2024 - December 2025",
+      active: false,
       description:
-        "The Django REST Framework backend powering the entire RetailBox ecosystem — POS app, storefront, and marketing site. Designed the data models, authentication and permissions layer, and auto-generated Swagger docs via drf-spectacular, and maintained the public Postman collection for developer integration.",
-      technologies: ["Django", "PostgreSQL", "Postman", "Swagger / OpenAPI"],
+        "The Django backend behind the RetailBox POS ecosystem. Responsible for QA, endpoint testing with Postman suites, and the API documentation (Swagger and the public Postman collection) used for developer integration. The payment endpoints are not publicly exposed.",
+      technologies: ["Django", "Postman", "Swagger / OpenAPI"],
       links: [
         {
           type: "Postman docs",
@@ -241,11 +289,6 @@ export const DATA = {
           href: "https://cafefausseplace.vercel.app/admin",
           icon: <Icons.globe className="size-3" />,
         },
-        // {
-        //   type: "github",
-        //   href: "https://cafefausseplace.vercel.app/admin",
-        //   icon: <Icons.github className="size-3" />,
-        // },
       ],
       image: "/images/cafe_fausse.png", // TODO: add screenshot to /public/images
       video: "",
@@ -256,7 +299,7 @@ export const DATA = {
       dates: "March 2025 - April 2025",
       active: false,
       description:
-        "A professional corporate website with service pages, project showcases, and consultation booking, with CMS-style content management through Django's built-in admin. Handled architecture, Tailwind-styled templates, Cloudinary media integration, and booking/contact forms as sole developer.",
+        "A responsive business website with service pages, project showcases, and consultation booking, with a secure staff dashboard and Google Calendar integration. Built with Django, Tailwind CSS, and Cloudinary, and deployed on Render.",
       technologies: ["Django", "Python", "Tailwind CSS", "Cloudinary"],
       links: [
         {
@@ -268,24 +311,6 @@ export const DATA = {
       image: "/images/bds.png", // TODO: add screenshot to /public/images
       video: "",
     },
-    // {
-    //   title: "Merch Visualizer",
-    //   href: "https://bluediamondsolutions.org/services/graphics-design/visualizer/",
-    //   dates: "2023", // TODO: replace with the actual timeframe
-    //   active: false,
-    //   description:
-    //     "A real-time 2D product customisation tool that lets clients preview branded merchandise - colours, text, and logo placement - directly in the browser, cutting back-and-forth on design requests. Built as a standalone React + TypeScript app rendering entirely on an HTML Canvas, embedded in the BlueDiamond site.",
-    //   technologies: ["React", "TypeScript", "Tailwind CSS"],
-    //   links: [
-    //     {
-    //       type: "Live demo",
-    //       href: "https://bluediamondsolutions.org/services/graphics-design/visualizer/",
-    //       icon: <Icons.globe className="size-3" />,
-    //     },
-    //   ],
-    //   image: "/images/merch-visualizer.png", // TODO: add screenshot to /public/images
-    //   video: "",
-    // },
   ],
 
   // TODO: fill in if/when you have hackathons to show, or leave empty and keep
