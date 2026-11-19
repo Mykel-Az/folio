@@ -1,5 +1,5 @@
 import { Icons } from "@/components/icons";
-import { House, Library } from "lucide-react";
+import { House } from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
 import { Typescript } from "@/components/ui/svgs/typescript";
@@ -10,19 +10,14 @@ import { Docker } from "@/components/ui/svgs/docker";
 export const DATA = {
   name: "Michael Azeez-Adekanmbi",
   initials: "MA",
-  // NOTE: this is a Vercel domain, but Starfolio ships with the Cloudflare adapter
-  // in astro.config.mjs. If you're deploying to Vercel, swap @astrojs/cloudflare
-  // for @astrojs/vercel there - otherwise update this URL to wherever you deploy.
   url: "https://michaelazeez-adekanmbi.vercel.app",
-  // location: "Alimosho, Lagos, Nigeria",
-  // locationLink: "https://www.google.com/maps/place/alimosho+lagos",
   description:
     "Full-stack software engineer building production web applications and AI-agent tooling with Python (Django, FastAPI) and TypeScript/React.",
   summary:
     "I'm a full-stack software engineer who builds and ships production web applications and AI-agent tooling. My experience spans payments, third-party API integrations, MCP servers, and data-driven prediction services, backed by solid QA and API documentation practice. Most recently I built MCP tools for an AI marketplace, and before that I shipped payments and domain brokerage for a retail platform. I'm currently pursuing an M.Sc. in Software Engineering. " +
     "[Check out the projects below](/#projects) for the details, and [get in touch](/#contact) if you'd like to work together.",
-  avatarUrl: "/Azz(1).jpeg", // TODO: add your headshot to /public/me.png
-  ogImage: "/og_image.png", // TODO: add an OG image to /public/og_image.png
+  avatarUrl: "/Azz(1).jpeg",
+  ogImage: "/og_image.png", // TODO: replace /public/og_image.png with your own 1200x630 image
   sections: {
     about: { order: 1, enabled: true, heading: "About" },
     work: { order: 2, enabled: true, heading: "Work Experience", presentLabel: "Present" },
@@ -35,18 +30,6 @@ export const DATA = {
       heading: "Check out my latest work",
       text: "I've worked on payments, third-party integrations, MCP servers for AI agents, and full-stack web apps. Here are a few of my favorites.",
     },
-    hackathons: {
-      order: 7,
-      enabled: false, // TODO: enable + fill in the `hackathons` array below if you have any to show
-      label: "Hackathons",
-      heading: "I like building things",
-      text: "During my time in university, I attended {count}+ hackathons.",
-    },
-    photos: {
-      order: 6,
-      enabled: false, // TODO: enable once you have photos to add to /public/photos
-      heading: "My Recent Travels",
-    },
     contact: {
       order: 8,
       enabled: true,
@@ -55,9 +38,7 @@ export const DATA = {
       text: "Open to fullstack and backend roles. Reach out on any of the channels below and I'll get back to you as soon as I can.",
     },
   },
-  photos: [],
-  // Icon-mapped where a Starfolio icon component exists; everything else renders
-  // as a plain text chip (just omit the `icon` field).
+  // Skills without an `icon` render as plain text chips.
   skills: [
     { name: "Python", icon: Python },
     { name: "Django" },
@@ -85,7 +66,7 @@ export const DATA = {
 
   navbar: [
     { href: "/", icon: House, label: "Home" },
-    { href: "/blog", icon: Library, label: "Blog" }, // remove this line if you don't plan to use the blog
+    // Add { href: "/blog", icon: Library, label: "Blog" } back once you publish a post.
   ],
   contact: {
     email: "azeezadekanmbimichael@gmail.com",
@@ -325,7 +306,4 @@ export const DATA = {
     },
   ],
 
-  // TODO: fill in if/when you have hackathons to show, or leave empty and keep
-  // sections.hackathons.enabled = false above
-  hackathons: [],
 } as const;

@@ -1,14 +1,9 @@
-# misc
-.claude/
-.vscode/
-.wrangler/
-
 # build output
 dist/
+.vercel/
 
 # generated types
 .astro/
-worker-configuration.d.ts
 
 # dependencies
 node_modules/
@@ -25,8 +20,10 @@ pnpm-debug.log*
 .env.local
 .env.*.local
 
+# editor / tooling
+.claude/
+.vscode/
+.idea/
+
 # macOS-specific files
 .DS_Store
-
-# jetbrains setting folder
-.idea/
