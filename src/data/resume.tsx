@@ -186,42 +186,42 @@ export const DATA = {
   ],
 
   projects: [
-    {
-      title: "SaaS Revenue Intelligence MCP Tool",
-      href: "https://github.com/Mykel-Az/CP-saas-revenue-intelligence",
-      dates: "March 2026 - May 2026",
-      active: false,
-      description:
-        "An MCP tool for the Context Protocol marketplace that turns public signals for SaaS companies (headcount growth, G2 reviews) into revenue-trajectory forecasts. Includes automated model retraining and a live prediction API.",
-      technologies: ["Python", "MCP", "ML Pipeline"], // TODO: confirm the stack
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/Mykel-Az/CP-saas-revenue-intelligence",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "", // TODO: add screenshot to /public/images
-      video: "",
-    },
-    {
-      title: "CRE Investor Discovery MCP Server",
-      href: "https://github.com/Mykel-Az/CRE-Investor-Discovery",
-      dates: "March 2026 - May 2026",
-      active: false,
-      description:
-        "An MCP server for commercial real estate investor discovery. Searching by corridor and lot size returns owner contacts, entity profiles, and nationwide portfolios, as a pay-per-query alternative to Reonomy's corridor-filter workflow.",
-      technologies: ["MCP", "Python"], // TODO: confirm the stack
-      links: [
-        {
-          type: "GitHub",
-          href: "https://github.com/Mykel-Az/CRE-Investor-Discovery",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
-      image: "", // TODO: add screenshot to /public/images
-      video: "",
-    },
+    // {
+    //   title: "SaaS Revenue Intelligence MCP Tool",
+    //   href: "https://github.com/Mykel-Az/CP-saas-revenue-intelligence",
+    //   dates: "March 2026 - May 2026",
+    //   active: false,
+    //   description:
+    //     "An MCP tool for the Context Protocol marketplace that turns public signals for SaaS companies (headcount growth, G2 reviews) into revenue-trajectory forecasts. Includes automated model retraining and a live prediction API.",
+    //   technologies: ["Python", "MCP", "ML Pipeline"], // TODO: confirm the stack
+    //   links: [
+    //     {
+    //       type: "GitHub",
+    //       href: "https://github.com/Mykel-Az/CP-saas-revenue-intelligence",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "", // TODO: add screenshot to /public/images
+    //   video: "",
+    // },
+    // {
+    //   title: "CRE Investor Discovery MCP Server",
+    //   href: "https://github.com/Mykel-Az/CRE-Investor-Discovery",
+    //   dates: "March 2026 - May 2026",
+    //   active: false,
+    //   description:
+    //     "An MCP server for commercial real estate investor discovery. Searching by corridor and lot size returns owner contacts, entity profiles, and nationwide portfolios, as a pay-per-query alternative to Reonomy's corridor-filter workflow.",
+    //   technologies: ["MCP", "Python"], // TODO: confirm the stack
+    //   links: [
+    //     {
+    //       type: "GitHub",
+    //       href: "https://github.com/Mykel-Az/CRE-Investor-Discovery",
+    //       icon: <Icons.github className="size-3" />,
+    //     },
+    //   ],
+    //   image: "", // TODO: add screenshot to /public/images
+    //   video: "",
+    // },
     {
       title: "RetailBox — POS App",
       href: "https://app.retailbox.co",
